@@ -14,3 +14,7 @@ username:1
 password:1
 
 itc folder is virtual environment
+
+prefrence: 1. Web
+           2. Web
+           3. Web
