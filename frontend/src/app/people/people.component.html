@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<br><br><br>
+<section class="wrapper">
+    <div class="container-fostrap">
+        <div class="text-center">
+            <h1 class="heading ">
+                List of Participants
+            </h1>
+        </div>
+        <div class="content">
+            <ul class="list-group list-group-light" *ngFor="let person of people">
+              <li class="list-group-item">
+                <div>
+                  <div>Name : <a class="fw-bold" [routerLink]="['/participant', person.id]">{{person.name}}</a></div>
+                  <div class="text-muted">Roll Number : {{person.roll_no}}</div>
+                </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+</section>

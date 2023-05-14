@@ -4,7 +4,7 @@ from .models import Project, Person
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['name', 'roll_no']
+        fields = ['id','name', 'roll_no']
 
 class ProjectSerializer(serializers.ModelSerializer):
     proposer = PersonSerializer()

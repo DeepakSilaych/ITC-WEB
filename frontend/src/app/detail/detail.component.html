@@ -1,5 +1,27 @@
-<ul>
-    <li *ngFor="let project of projects">
-      <a routerLink="/projects/{{ project.id }}">{{ project.name }}</a>
-    </li>
-  </ul>
+<app-navbar></app-navbar>
+<br><br><br><br>
+<div class="container">
+    <h1>{{project.name}}</h1>
+    <table class="table">
+            <tbody>
+                <tr>
+                    <th>Proposer:</th>
+                    <td><a [routerLink]="['/participant', project.proposer.id]"  class="text">{{project.proposer.name}}</a></td>
+                </tr>
+                <tr>
+                    <th>People Involved:</th>
+                    <td>
+                        <span *ngFor="let person of project.people_involved">
+                            <a [routerLink]="['/participant', person.id]" class="text">
+                                {{person.name}} 
+                            </a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Details:</th>
+                    <td>{{project.details}}</td>
+                </tr>
+            </tbody>
+    </table>
+</div>

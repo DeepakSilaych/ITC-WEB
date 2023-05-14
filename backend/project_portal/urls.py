@@ -1,12 +1,11 @@
 from django.urls import path
-from .views import ProjectList, ProjectDetail, PersonProjects
-from .serializers import PersonSerializer
-from .models import Person
+from .views import ProjectList, ProjectDetail, PersonProjects, PersonList,PersonDetail
 from rest_framework import generics
 
 urlpatterns = [
     path('projects/', ProjectList.as_view(), name='project-list'),
     path('projects/<int:pk>/', ProjectDetail.as_view(), name='project-detail'),
-    path('projects/person/<int:roll_no>/', PersonProjects.as_view(), name='person-projects'),
-    path('people/', generics.ListCreateAPIView.as_view(queryset=Person.objects.all(), serializer_class=PersonSerializer), name='person-list'),
+    path('personprojects/<int:pk>/', PersonProjects.as_view(), name='person-projects'),
+    path('person/', PersonList.as_view(), name='people-list'),
+    path('person/<int:pk>/', PersonDetail.as_view(), name='person-details'),
 ]
