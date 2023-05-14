@@ -10547,3 +10547,16 @@ img::-moz-selection {
 .highlight-size{
     font-size: 150%;
 }
+
+.dark1{
+    background-image:url('../../img/bot.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 50%;
+}
+
+.dark2{
+    background-image:url('../../img/dark3.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
